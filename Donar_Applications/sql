@@ -1,0 +1,14 @@
+
+SQL> create table Donor_Details(Donor_Id varchar2(20),Donor_Name varchar2(20),Address varchar2(20),Phone_Number varchar2(20),Donor_Date date,Donor_Amount number);
+
+Table created.
+
+SQL> create sequence donorId_sequence start with 1000;
+
+Sequence created.
+
+SQL> commit;
+
+Commit complete.
+
+insert into Donor_Details values(donorId_sequence.nextVal(),?,?,?,SYSDATE,?)
